@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Playbook H1 M04</title>
+    <title>Playbook</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -82,6 +82,34 @@
             margin-bottom: 10px;
         }
     </style>
+    <script>
+        function updateActivities() {
+            var selectedTime = document.getElementById('time-select').value;
+            var activities = document.getElementsByClassName('activity');
+
+            document.getElementById('selected-time').innerText = "Tiempo efectivo de clase: " + selectedTime + " minutos";
+
+            for (var i = 0; i < activities.length; i++) {
+                activities[i].style.display = 'block';
+            }
+
+            if (selectedTime === '45') {
+                document.getElementById('activity-4').style.display = 'none';
+            } else if (selectedTime === '40') {
+                document.getElementById('activity-2').style.display = 'none';
+                document.getElementById('activity-4').style.display = 'none';
+            }
+        }
+
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
 </head>
 <body>
 
@@ -357,33 +385,6 @@
         </div>
     </div>
 </div>
-
-<script>
-    function updateActivities() {
-        var selectedTime = document.getElementById('time-select').value;
-        var activities = document.getElementsByClassName('activity');
-
-        document.getElementById('selected-time').innerText = "Tiempo efectivo de clase: " + selectedTime + " minutos";
-
-        for (var i = 0; i < activities.length; i++) {
-            activities[i].style.display = 'block';
-        }
-
-        if (selectedTime === '45') {
-            document.getElementById('activity-4').style.display = 'none';
-        } else if (selectedTime === '40') {
-            document.getElementById('activity-2').style.display = 'none';
-            document.getElementById('activity-4').style.display = 'none';
-        }
-    }
-</script>
-
-</div> <!-- Cierre del container -->
-
-<!-- Scripts adicionales si es necesario -->
-<script>
-    // Agregar scripts adicionales aquí si es necesario
-</script>
 
 </body>
 </html>
