@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook H1 M04</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .banner {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .banner .title {
+            font-size: 1.2em;
+            display: flex;
+            justify-content: space-between;
+        }
+        .banner .subtitle {
+            font-size: 1em;
+            margin-top: 5px;
+            border-top: 1px solid white;
+            padding-top: 5px;
+        }
+        .content {
+            display: none;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 15px;
+        }
+        .step-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+        .section-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+            text-align: right;
+        }
+        .dialogue {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            text-align: right;
+            font-style: italic;
+        }
+        .dropdown {
+            margin-bottom: 20px;
+        }
+        .dropdown select {
+            font-size: 1em;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        .time-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Playbook H1 M04</h1>
+</div>
+
+<div class="container">
+    <div class="dropdown">
+        <label for="time-select">Tiempo efectivo de Clase:</label>
+        <select id="time-select" onchange="updateActivities()">
+            <option value="50">50 minutos</option>
+            <option value="45">45 minutos</option>
+            <option value="40">40 minutos</option>
+        </select>
+    </div>
+
+    <h2 id="selected-time" class="time-title">Tiempo efectivo de clase: 50 minutos</h2>
+
+    <!-- Actividad 1 (4 pasos) -->
+    <div id="activity-1" class="activity">
+        <div class="banner" onclick="toggleContent('saludo')">
+            <div class="title">
+                <span>📚 Actividad 1: Saludo y Ritual Gnius Club (4 pasos)</span>
+                <span>⏰ Tiempo: 2.5 minutos</span>
+            </div>
+            <div class="subtitle">Dar la bienvenida y preparar el ambiente</div>
+        </div>
+        <div id="saludo" class="content">
+            <div class="section">
+                <div class="step-title">Paso 1 (0.5 minutos): Proyectar Diapositiva 2 "Gnius Club"</div>
+                <div class="section-title">Diálogo del Maestro</div>
+                <div class="dialogue">Hola, Genios. Hoy vamos a explorar los diferentes tipos de inteligencia artificial que existen. Vamos a ver cómo cada tipo se aplica en el mundo real y cómo impacta nuestras vidas cotidianas.</div>
+            </div>
+            <div class="section">
+                <div class="step-title">Paso 2 (1.0 minutos): Proyectar Diapositiva 3 "¿Cómo están hoy?"</div>
+                <div class="section-title">Diálogo del Maestro</div>
+                <div class="dialogue">Antes de sumergirnos en el fascinante mundo de la IA, quiero saber cómo se sienten hoy. Si están emocionados por aprender algo nuevo, levanten las dos manos. Si están un poco cansados, crucen los brazos frente a su pecho.</div>
+            </div>
+            <div class="section">
+                <div class="step-title">Paso 3 (0.5 minutos): Proyectar Diapositiva 4 "Gracias por Asistir"</div>
+                <div class="section-title">Diálogo del Maestro</div>
+                <div class="dialogue">Como siempre, juntemos nuestras manos en agradecimiento por la oportunidad de aprender algo nuevo hoy. ¡Gracias por asistir, Genios!</div>
+            </div>
+            <div class="section">
+                <div class="step-title">Paso 4 (0.5 minutos): Proyectar Diapositiva 5 "Objetivos de la Misión"</div>
+                <div class="section-title">Diálogo del Maestro</div>
+                <div class="dialogue">Hoy tenemos dos objetivos importantes: 1. Reconocer los diferentes tipos de inteligencia artificial. 2. Identificar ejemplos del mundo real donde se aplican estos tipos de IA. ¡Vamos a descubrir cómo la IA está cambiando el mundo!</div>
+            </div>
+        </div>
+    </div>
+<!-- Actividad 2 (3 pasos) -->
+<div id="activity-2" class="activity">
+    <div class="banner" onclick="toggleContent('innovacion_del_dia')">
+        <div class="title">
+            <span>📚 Actividad 2: Innovación del Día (3 pasos)</span>
+            <span>⏰ Tiempo: 6 minutos</span>
+        </div>
+        <div class="subtitle">Descubrir DALL·E, una herramienta de IA que genera imágenes a partir de texto</div>
+    </div>
+    <div id="innovacion_del_dia" class="content">
+        <div class="section">
+            <div class="step-title">Paso 1 (2 minutos): Proyectar Diapositiva 6 "Presentación de DALL·E"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Genios, hoy les voy a mostrar una aplicación sorprendente de la inteligencia artificial que está revolucionando el mundo de la creatividad visual. Se llama DALL·E, una IA capaz de generar imágenes a partir de descripciones en texto.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 2 (2 minutos): Proyectar Diapositiva 7 "Explorando DALL·E"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">DALL·E, desarrollado por OpenAI, puede tomar una descripción escrita y convertirla en una imagen única y detallada. Vamos a ver cómo funciona y explorar algunas de las creaciones más sorprendentes de esta IA.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 3 (2 minutos): Proyectar Diapositiva 8 "Reflexión sobre DALL·E"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">¿Qué les parece? DALL·E no solo es una herramienta impresionante, sino que también muestra cómo la inteligencia artificial puede cruzar las fronteras entre la tecnología y la creatividad. Esta IA tiene aplicaciones que van desde el diseño gráfico hasta la creación de prototipos en ingeniería. Ahora, vamos a relacionar esto con los diferentes tipos de inteligencia artificial que estudiaremos hoy.</div>
+        </div>
+    </div>
+</div>
+<!-- Actividad 3 (9 pasos) -->
+<div id="activity-3" class="activity">
+    <div class="banner" onclick="toggleContent('brain_gym')">
+        <div class="title">
+            <span>📚 Actividad 3: Brain Gym (9 pasos)</span>
+            <span>⏰ Tiempo: 15 minutos</span>
+        </div>
+        <div class="subtitle">Explorar los diferentes tipos de inteligencia artificial y sus aplicaciones</div>
+    </div>
+    <div id="brain_gym" class="content">
+        <div class="section">
+            <div class="step-title">Paso 1 (2 minutos): Proyectar Diapositiva 9 "Introducción a los tipos de IA"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Genios, la inteligencia artificial es una tecnología fascinante, pero no todas las IA son iguales. Existen diferentes tipos de inteligencia artificial, cada uno con capacidades y aplicaciones distintas. Hoy vamos a explorar estos tipos y entender cómo cada uno juega un papel único en nuestro mundo.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 2 (2 minutos): Proyectar Diapositiva 10 "IA Reactiva"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">El primer tipo de inteligencia artificial que vamos a ver es la IA reactiva. Este tipo de IA es el más básico. No tiene memoria ni la capacidad de aprender de experiencias pasadas. Simplemente responde a estímulos en tiempo real. Un ejemplo de esto es Deep Blue, la supercomputadora de IBM que derrotó al campeón mundial de ajedrez Garry Kasparov en 1997. Deep Blue podía analizar muchas posiciones posibles en un juego de ajedrez y elegir la mejor jugada, pero no aprendía ni recordaba las jugadas anteriores.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 3 (2 minutos): Proyectar Diapositiva 11 "IA con Memoria Limitada"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">El siguiente tipo de IA es la IA con memoria limitada. A diferencia de la IA reactiva, este tipo de inteligencia artificial puede aprender de datos históricos para mejorar su rendimiento en el futuro. Sin embargo, su memoria es limitada y solo se utiliza para un propósito específico. Un ejemplo común de esto son los autos autónomos, como los de Tesla. Estos vehículos recopilan datos sobre su entorno, como la velocidad de los vehículos cercanos o la señalización vial, y utilizan esa información para tomar decisiones en tiempo real, como frenar o cambiar de carril. Aunque pueden aprender de su entorno, no tienen una memoria continua como los humanos.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 4 (2 minutos): Proyectar Diapositiva 12 "IA Teórica"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">La IA teórica, también conocida como IA general, es un tipo de inteligencia artificial que aún está en desarrollo y que busca replicar la inteligencia humana en su totalidad. Esta IA podría realizar cualquier tarea que un humano pueda hacer, e incluso aprender y adaptarse a nuevas situaciones sin intervención humana. A día de hoy, esta IA solo existe en teoría y en algunas investigaciones avanzadas. Un ejemplo de cómo se imagina esta IA podría ser un robot que no solo realice tareas específicas, sino que pueda aprender nuevas habilidades por sí mismo.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 5 (2 minutos): Proyectar Diapositiva 13 "IA de Procesamiento de Lenguaje Natural"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">El siguiente tipo de IA es la IA de procesamiento de lenguaje natural, como GPT-3 de OpenAI. Esta IA utiliza enormes bases de datos de texto para aprender patrones en el lenguaje. Cuando le das un prompt, como "Escribe una historia sobre un dragón", el modelo utiliza esos patrones para generar una respuesta que parece escrita por un humano. Estos modelos se utilizan en asistentes virtuales, chatbots, y más. Son herramientas muy poderosas porque pueden comunicarse de manera natural con las personas.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 6 (2 minutos): Proyectar Diapositiva 14 "IA de Percepción"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">La IA de Percepción es otro tipo importante de inteligencia artificial. Este tipo de IA es capaz de interpretar y entender información del mundo real a través de los sentidos, como la vista o el oído. Por ejemplo, el reconocimiento facial que usan muchos smartphones es una forma de IA de Percepción. Esta IA analiza la imagen del rostro que toma la cámara, comparándola con los datos almacenados, para determinar si coincide con el propietario del dispositivo. Este tipo de IA se utiliza en sistemas de seguridad, asistentes de voz que reconocen comandos, y mucho más.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 7 (2 minutos): Proyectar Diapositiva 15 "IA de Toma de Decisiones"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">La IA de Toma de Decisiones es una de las aplicaciones más avanzadas y se utiliza en situaciones donde se deben tomar decisiones complejas rápidamente. Un ejemplo es el sistema de comercio de alta frecuencia en los mercados financieros, donde las IA toman decisiones de compra y venta en fracciones de segundo basándose en grandes cantidades de datos. Estas decisiones pueden tener un gran impacto económico y por eso es crucial que la IA esté bien programada y supervisada.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 8 (2 minutos): Proyectar Diapositiva 16 "Resumen de los tipos de IA"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Como pueden ver, cada tipo de inteligencia artificial tiene funciones y aplicaciones específicas, desde responder a comandos simples hasta tomar decisiones complejas en fracciones de segundo. La IA está integrada en muchos aspectos de nuestra vida diaria, y entender estos tipos nos ayuda a apreciar cómo y dónde se utiliza.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 9 (2 minutos): Proyectar Diapositiva 17 "Objetivos alcanzados"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Hoy hemos cumplido con nuestro objetivo de aprender sobre los diferentes tipos de inteligencia artificial y sus aplicaciones en el mundo real. Este conocimiento es fundamental para entender cómo la tecnología está moldeando nuestro presente y futuro. ¡Gran trabajo, Genios!</div>
+        </div>
+    </div>
+</div>
+<!-- Actividad 4 (3 pasos) -->
+<div id="activity-4" class="activity">
+    <div class="banner" onclick="toggleContent('state_change')">
+        <div class="title">
+            <span>📚 Actividad 4: State Change (3 pasos)</span>
+            <span>⏰ Tiempo: 5 minutos</span>
+        </div>
+        <div class="subtitle">Un juego rápido para activar las mentes y estimular la creatividad</div>
+    </div>
+    <div id="state_change" class="content">
+        <div class="section">
+            <div class="step-title">Paso 1 (1 minuto): Proyectar Diapositiva 18 "Iniciar juego"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Genios, vamos a hacer un juego rápido para activar nuestras mentes. Les voy a dar un ritmo con las palmas, y siguiendo ese ritmo, cada uno de ustedes va a decir una palabra relacionada con la inteligencia artificial. Solo una palabra por persona. Si alguien se tarda demasiado, lo saltaremos y pasaremos al siguiente. ¿Listos?</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 2 (2 minutos): Proyectar Diapositiva 19 "Jugar al ritmo"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Vamos a empezar. [Comienza a aplaudir en un ritmo constante]. ¡Primero tú! [Señala al primer estudiante]. Ahora tú. ¡Siguiente! Mantengan el ritmo y piensen rápido.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 3 (2 minutos): Proyectar Diapositiva 20 "Conclusión del juego"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">¡Excelente trabajo, Genios! Este juego no solo nos hace pensar rápido, sino que también estimula nuestra creatividad. Estas son habilidades clave, especialmente cuando hablamos de temas tan dinámicos como la inteligencia artificial.</div>
+        </div>
+    </div>
+</div>
+<!-- Actividad 5 (3 pasos) -->
+<div id="activity-5" class="activity">
+    <div class="banner" onclick="toggleContent('team_gnius')">
+        <div class="title">
+            <span>📚 Actividad 5: Team Gnius (3 pasos)</span>
+            <span>⏰ Tiempo: 5 minutos</span>
+        </div>
+        <div class="subtitle">Formación de parejas para la siguiente misión</div>
+    </div>
+    <div id="team_gnius" class="content">
+        <div class="section">
+            <div class="step-title">Paso 1 (2 minutos): Proyectar Diapositiva 21 "Elegir nuevo compañero"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Genios, para esta misión vamos a trabajar nuevamente en parejas, pero esta vez quiero que elijan a un compañero distinto a los que tuvieron en las misiones anteriores. Es una gran oportunidad para aprender de alguien nuevo y compartir ideas frescas.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 2 (2 minutos): Proyectar Diapositiva 22 "Buscar compañero"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Tómense un minuto para encontrar a su nuevo compañero. Recuerden que trabajar con diferentes personas les permitirá tener una visión más amplia y aprender de diversas perspectivas. Una vez que tengan su pareja, vayan a recoger una Magic Tablet por equipo.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 3 (1 minuto): Proyectar Diapositiva 23 "Listos para la siguiente actividad"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">¿Ya están todos en pareja y tienen su Magic Tablet? Perfecto. Ahora que están organizados, vamos a prepararnos para la siguiente actividad, donde pondremos en práctica lo aprendido hoy.</div>
+        </div>
+    </div>
+</div>
+<!-- Actividad 6 (6 pasos) -->
+<div id="activity-6" class="activity">
+    <div class="banner" onclick="toggleContent('challenge')">
+        <div class="title">
+            <span>📚 Actividad 6: Challenge (6 pasos)</span>
+            <span>⏰ Tiempo: 12 minutos</span>
+        </div>
+        <div class="subtitle">Aplicar el conocimiento de los tipos de IA en aplicaciones reales</div>
+    </div>
+    <div id="challenge" class="content">
+        <div class="section">
+            <div class="step-title">Paso 1 (5 minutos): Proyectar Diapositiva 24 "Elegir aplicación"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Genios, en este desafío, van a elegir una aplicación de su elección y determinar qué tipo de inteligencia artificial está involucrada en ella. Les voy a dar algunos ejemplos de aplicaciones que pueden usar: 1. Google Maps: ¿Qué tipo de IA creen que usa para predecir el tráfico y calcular rutas? 2. Spotify: ¿Qué tipo de IA se encarga de recomendarles nuevas canciones? 3. Instagram: ¿Cómo se usa la IA en los filtros de imágenes y en la personalización de su feed?</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 2 (N/A): Proyectar Diapositiva 25 "N/A"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">N/A</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 3 (3 minutos): Proyectar Diapositiva 26 "Compartir descubrimientos"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Genios, ahora quiero escuchar lo que han encontrado. Voy a seleccionar a tres parejas voluntarias que tendrán 1 minuto cada una para compartir con la clase la aplicación que eligieron y cuál consideran que es el tipo de IA que utiliza. ¿Quién quiere ser el primero?</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 4 (3 minutos): Proyectar Diapositiva 27 "Presentaciones"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Vamos a empezar con la primera pareja. Tienen un minuto para compartir su aplicación y análisis. [Repite para las tres parejas seleccionadas].</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 5 (1 minuto): Proyectar Diapositiva 28 "Conclusión y Mon-e"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Excelente trabajo, Genios. Hoy han aplicado lo que aprendimos sobre los tipos de inteligencia artificial al analizar aplicaciones reales. ¡Felicidades! Todos han hecho un gran esfuerzo y se merecen Mon-e por su dedicación.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 6 (1 minuto): Proyectar Diapositiva 29 "Objetivos alcanzados"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Antes de finalizar, revisemos los objetivos que alcanzamos hoy: 1. Reconocimos los diferentes tipos de inteligencia artificial. 2. Aplicamos este conocimiento para analizar aplicaciones del mundo real. ¡Gran trabajo, Genios!</div>
+        </div>
+    </div>
+</div>
+<!-- Actividad 7 (3 pasos) -->
+<div id="activity-7" class="activity">
+    <div class="banner" onclick="toggleContent('easter_egg')">
+        <div class="title">
+            <span>📚 Actividad 7: Easter Egg (3 pasos)</span>
+            <span>⏰ Tiempo: 3 minutos</span>
+        </div>
+        <div class="subtitle">Evaluar la atención con una pregunta sorpresa</div>
+    </div>
+    <div id="easter_egg" class="content">
+        <div class="section">
+            <div class="step-title">Paso 1 (1 minuto): Proyectar Diapositiva 30 "Pregunta sorpresa"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Genios, es hora de ver quién ha estado prestando atención. La siguiente diapositiva tiene una pregunta sobre algo que discutimos hoy. Voy a premiar con Mon-e a las tres primeras personas que me den la respuesta correcta. Recuerden la dinámica: en cuanto pase a la siguiente diapositiva, lean la pregunta y si saben la respuesta, levanten la mano. No digan la respuesta en voz alta, solo levanten la mano. Yo seleccionaré a 3 de ustedes. ¿Listos?</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 2 (1 minuto): Proyectar Diapositiva 31 "Levantar la mano"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Uno, dos, tres. Levanten la mano si saben la respuesta. ¡Muy bien! Vamos a escuchar lo que tienen que decir.</div>
+        </div>
+        <div class="section">
+            <div class="step-title">Paso 3 (1 minuto): Proyectar Diapositiva 32 "Revelar la respuesta correcta"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Uno, ven y dime la respuesta al oído. Ahora tú, dos. Y por último, el tres. La respuesta correcta es "Gary Kasparov". ¡Muy bien, a los ganadores les toca Mon-e!</div>
+        </div>
+    </div>
+</div>
+<!-- Actividad 8 (1 paso) -->
+<div id="activity-8" class="activity">
+    <div class="banner" onclick="toggleContent('honor_dojo')">
+        <div class="title">
+            <span>📚 Actividad 8: Honor de Dojo (1 paso)</span>
+            <span>⏰ Tiempo: 2 minutos</span>
+        </div>
+        <div class="subtitle">Recoger y ordenar el salón</div>
+    </div>
+    <div id="honor_dojo" class="content">
+        <div class="section">
+            <div class="step-title">Paso 1 (2 minutos): Proyectar Diapositiva 33 "Recoger Magic Tablets"</div>
+            <div class="section-title">Diálogo del Maestro</div>
+            <div class="dialogue">Cada equipo pase al frente y denme sus Magic Tablets.</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function updateActivities() {
+        var selectedTime = document.getElementById('time-select').value;
+        var activities = document.getElementsByClassName('activity');
+
+        document.getElementById('selected-time').innerText = "Tiempo efectivo de clase: " + selectedTime + " minutos";
+
+        for (var i = 0; i < activities.length; i++) {
+            activities[i].style.display = 'block';
+        }
+
+        if (selectedTime === '45') {
+            document.getElementById('activity-4').style.display = 'none';
+        } else if (selectedTime === '40') {
+            document.getElementById('activity-2').style.display = 'none';
+            document.getElementById('activity-4').style.display = 'none';
+        }
+    }
+</script>
+
+</div> <!-- Cierre del container -->
+
+<!-- Scripts adicionales si es necesario -->
+<script>
+    // Agregar scripts adicionales aquí si es necesario
+</script>
+
+</body>
+</html>
